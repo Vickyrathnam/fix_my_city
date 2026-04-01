@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Crowd-Sourced Infrastructure Monitor"
+    />
+    <title>CivicWatch - Infrastructure Monitor</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Google Maps -->
+    <script>
+      window.onGoogleMapsLoaded = function() {
+        console.log('Google Maps API loaded successfully');
+        window.googleMapsReady = true;
+      };
+      
+      window.onGoogleMapsError = function() {
+        console.error('Google Maps API failed to load');
+        window.googleMapsReady = false;
+      };
+    </script>
+    <script 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARRqi17fOiIckj1w-pCNDSagPyhmhgCsQ&libraries=places&callback=onGoogleMapsLoaded&onerror=onGoogleMapsError"
+      async
+      defer
+    ></script>
+    
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(228, 226, 225, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #005bbf 0%, #1a73e8 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
