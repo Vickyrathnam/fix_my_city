@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.com', 'https://your-vercel-app.vercel.app']
+    ? ['https://fix-my-city-udyu.onrender.com']
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true
 }));

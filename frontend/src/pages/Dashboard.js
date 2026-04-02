@@ -20,7 +20,7 @@ const Dashboard = () => {
       if (filter.type) params.append('type', filter.type);
       if (filter.status) params.append('status', filter.status);
       
-      const response = await axios.get(`http://localhost:3001/api/issues?${params}`);
+      const response = await axios.get(`https://fix-my-city-udyu.onrender.com/api/issues?${params}`);
       let filteredIssues = response.data.issues;
       
       // Apply search filter
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
   const updateIssueStatus = async (issueId, newStatus) => {
     try {
-      await axios.put(`http://localhost:3001/api/issues/${issueId}/status`, {
+      await axios.put(`https://fix-my-city-udyu.onrender.com/api/issues/${issueId}/status`, {
         status: newStatus
       });
       

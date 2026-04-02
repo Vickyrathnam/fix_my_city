@@ -112,7 +112,7 @@ const ReportIssue = () => {
       });
 
       const response = await axios.post(
-        'http://localhost:3001/api/issues',
+        'https://fix-my-city-udyu.onrender.com/api/issues',
         formDataToSend,
         {
           headers: {

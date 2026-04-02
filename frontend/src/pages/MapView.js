@@ -18,7 +18,7 @@ const MapView = () => {
   const fetchIssues = async () => {
     try {
       console.log('Fetching issues from backend...');
-      const response = await axios.get('http://localhost:3001/api/issues');
+      const response = await axios.get('https://fix-my-city-udyu.onrender.com/api/issues');
       console.log('Issues fetched successfully:', response.data);
       setIssues(response.data.issues);
       

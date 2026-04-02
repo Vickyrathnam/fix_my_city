@@ -16,7 +16,7 @@ const AdminDashboard = () => {
       if (filter.type) params.append('type', filter.type);
       if (filter.status) params.append('status', filter.status);
       
-      const response = await axios.get(`http://localhost:3001/api/issues?${params}`);
+      const response = await axios.get(`https://fix-my-city-udyu.onrender.com/api/issues?${params}`);
       setIssues(response.data.issues);
     } catch (error) {
       console.error('Error fetching issues:', error);
@@ -27,7 +27,7 @@ const AdminDashboard = () => {
 
   const updateIssueStatus = async (issueId, newStatus) => {
     try {
-      await axios.put(`http://localhost:3001/api/issues/${issueId}/status`, {
+      await axios.put(`https://fix-my-city-udyu.onrender.com/api/issues/${issueId}/status`, {
         status: newStatus
       });
       
